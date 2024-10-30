@@ -48,7 +48,7 @@ for event in "${a[@]}"; do
     end_date_unix=""
   fi
   # tags
-  tags=$(echo "${event}" | hxselect -s '\n' -c "div.tags small" | sed 's/.*<\/svg> *//g' | sed '/^$/d' | recode html..ascii)
+  tags=$(echo "${event}" | hxselect -s '\n' -c "div.tags small" | sed 's/.*<\/svg> *//g' | sed '/^$/d' | recode html..ascii | sed 's/^ *//g' | sed 's/ *$//g')
 
   # create json
   json=$(jq -n --arg url_base "${URL_base}" \
