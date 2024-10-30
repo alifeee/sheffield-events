@@ -1,0 +1,161 @@
+{
+  "last_edited": "Wed 30 Oct 2024 17:05:18 UTC",
+  "last_edited_unix": "1730307918",
+  "events": [
+    {
+      "name": "Meraki Exhibition",
+      "link": "https://www.welcometosheffield.co.uk/content/events/meraki-exhibition/",
+      "description": "Join the Sheffield Artists’ Circle for the annual group exhibition at The Circle in Sheffield.",
+      "datetime": "02 Oct 2024 - 31 Oct 2024",
+      "start_date": "02 Oct 2024",
+      "end_date": "31 Oct 2024",
+      "start_date_unix": "1727823600",
+      "end_date_unix": "1730332800",
+      "tags": [
+        "Art Exhibition ",
+        "Free "
+      ]
+    },
+    {
+      "name": "Black History Month 2024 Film Festival",
+      "link": "https://www.welcometosheffield.co.uk/content/events/black-history-month-2024-film-festival/",
+      "description": "In celebration of Black History Month 2024, Showroom Cinema celebrates the strength, creativity, and resilience of the Black and POC community.",
+      "datetime": "05 Oct 2024 - 02 Nov 2024",
+      "start_date": "05 Oct 2024",
+      "end_date": "02 Nov 2024",
+      "start_date_unix": "1728082800",
+      "end_date_unix": "1730505600",
+      "tags": [
+        "African Heritage ",
+        "City centre event ",
+        "Film ",
+        "Festival ",
+        "Black History Month "
+      ]
+    },
+    {
+      "name": "Scratching the surface – Breaking through by Corinna Button",
+      "link": "https://www.welcometosheffield.co.uk/content/events/scratching-the-surface-breaking-through-by-corinna-button/",
+      "description": "New exhibition 'Scratching the surface – Breaking through' by Corinna Button is coming with an opening event on Friday 4th October.",
+      "datetime": "05 Oct 2024 - 16 Nov 2024",
+      "start_date": "05 Oct 2024",
+      "end_date": "16 Nov 2024",
+      "start_date_unix": "1728082800",
+      "end_date_unix": "1731715200",
+      "tags": [
+        "Art Exhibition "
+      ]
+    },
+    {
+      "name": "Off The Shelf Festival of Words 2024",
+      "link": "https://www.welcometosheffield.co.uk/content/events/off-the-shelf-festival-of-words-2024/",
+      "description": "Sheffield's annual festival celebrating books, words and ideas, is one of the UK’s largest literary festivals. Taking place 7 October - 3 November, the festival will be bringing some of the biggest names in literary talent, media and the arts to South Yorkshire.",
+      "datetime": "07 Oct 2024 - 03 Nov 2024",
+      "start_date": "07 Oct 2024",
+      "end_date": "03 Nov 2024",
+      "start_date_unix": "1728255600",
+      "end_date_unix": "1730592000",
+      "tags": [
+        "Festival ",
+        "Talks & Lectures ",
+        "Literary event ",
+        "Major Events "
+      ]
+    },
+    {
+      "name": "Dead Cat Bounce",
+      "link": "https://www.welcometosheffield.co.uk/content/events/dead-cat-bounce/",
+      "description": "Dead Cat Bounce is an exhibition about an experimental opera by Gary Zhexi Zhang and Waste Paper Opera that imagines parallel realities of environmental and financial catastrophes across time and space.",
+      "datetime": "17 Oct 2024 - 14 Dec 2024",
+      "start_date": "17 Oct 2024",
+      "end_date": "14 Dec 2024",
+      "start_date_unix": "1729119600",
+      "end_date_unix": "1734134400",
+      "tags": [
+        "Art Exhibition ",
+        "Music ",
+        "Opera "
+      ]
+    },
+    {
+      "name": "Witches & Wizards at The Tropical Butterfly House ",
+      "link": "https://www.welcometosheffield.co.uk/content/events/witches-wizards-at-the-tropical-butterfly-house/",
+      "description": "Are you ready for some spooky surprises and mystical mayhem this October half-term holiday! Join the Tropical Butterfly House for some frightfully good family fun, 19 October - 3 November, 10am to 5pm.",
+      "datetime": "19 Oct 2024 - 03 Nov 2024",
+      "start_date": "19 Oct 2024",
+      "end_date": "03 Nov 2024",
+      "start_date_unix": "1729292400",
+      "end_date_unix": "1730592000",
+      "tags": [
+        "Children's event ",
+        "Family ",
+        "Halloween "
+      ]
+    },
+    {
+      "name": "Give Over Exhibition ",
+      "link": "https://www.welcometosheffield.co.uk/content/events/give-over-exhibition/",
+      "description": "A free exhibition showcasing commissioned art created in response to racist media reporting and border abolition.",
+      "datetime": "22 Oct 2024 - 12 Nov 2024",
+      "start_date": "22 Oct 2024",
+      "end_date": "12 Nov 2024",
+      "start_date_unix": "1729551600",
+      "end_date_unix": "1731369600",
+      "tags": [
+        "Art Exhibition ",
+        "Free "
+      ]
+    },
+    {
+      "name": "Strange Sheffield Ghost Walks - Haunted Halloween",
+      "link": "https://www.welcometosheffield.co.uk/content/events/strange-sheffield-ghost-walks-haunted-halloween-1/",
+      "description": "This Halloween embark on a spine-chilling journey through the dark heart of Sheffield! Join Strange Britain for one of their specially spooky city centre walks, taking place 23 October - 1 November.",
+      "datetime": "23 Oct 2024 - 01 Nov 2024",
+      "start_date": "23 Oct 2024",
+      "end_date": "01 Nov 2024",
+      "start_date_unix": "1729638000",
+      "end_date_unix": "1730419200",
+      "tags": [
+        "Guided Walk ",
+        "Guided Tour ",
+        "Outdoor ",
+        "Walking Event ",
+        "Heritage & Historical Events ",
+        "Heritage ",
+        "City centre event ",
+        "Halloween "
+      ]
+    },
+    {
+      "name": "Acts of Creation: On Art and Motherhood.",
+      "link": "https://www.welcometosheffield.co.uk/content/events/acts-of-creation-on-art-and-motherhood/",
+      "description": "This new exhibition from Hayward Gallery Touring comes to the Millennium Gallery in Sheffield and plunges into the joys and heartaches, mess, myths and mishaps of motherhood through over 100 artworks, from the feminist avant-garde to the present day.",
+      "datetime": "24 Oct 2024 - 19 Jan 2025",
+      "start_date": "24 Oct 2024",
+      "end_date": "19 Jan 2025",
+      "start_date_unix": "1729724400",
+      "end_date_unix": "1737244800",
+      "tags": [
+        "Exhibition ",
+        "Art Exhibition ",
+        "City centre event ",
+        "Free "
+      ]
+    },
+    {
+      "name": "DAHOMEY",
+      "link": "https://www.welcometosheffield.co.uk/content/events/dahomey/",
+      "description": "Showing as part of Showroom Cinema's Black History Month Film Festival, and blending fact and fiction, Dahomey tells the story of the return of 26 artworks that were repatriated from Paris back to their original home of Benin ...",
+      "datetime": "25 Oct 2024 - 31 Oct 2024",
+      "start_date": "25 Oct 2024",
+      "end_date": "31 Oct 2024",
+      "start_date_unix": "1729810800",
+      "end_date_unix": "1730332800",
+      "tags": [
+        "African Heritage ",
+        "Black History Month ",
+        "Film "
+      ]
+    }
+  ]
+}
