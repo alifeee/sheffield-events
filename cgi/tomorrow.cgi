@@ -27,7 +27,7 @@ cat ../events.json | \
 )
 
 if [ -z "${tom_events}" ]; then
-  echo "something went wrong..."
+  echo "something went wrong... no events..."
 else
   echo "${tom_events}"
 fi
