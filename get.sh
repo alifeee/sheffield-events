@@ -48,7 +48,7 @@ for event in "${a[@]}"; do
     end_date_unix=""
   fi
   # tags
-  tags=$(echo "${event}" | hxselect -s '\n' -c "div.tags small" | sed 's/.*<\/svg> *//g' | sed '/^$/d' | recode html..ascii | sed 's/^ *//g' | sed 's/ *$//g')
+  tags=$(echo "${event}" | hxselect -s '\n' -c "div.tags small" | sed 's/.*<\/svg> *//g' | sed '/^$/d' | sed 's/^ *//g' | sed 's/ *$//g')
 
   # create json
   json=$(jq -n --arg url_base "${URL_base}" \
@@ -70,5 +70,7 @@ for event in "${a[@]}"; do
 done
 
 all_json="${all_json}]"
+# decode html entities
+all_json=$(echo "${all_json}" | php -r 'while ($f = fgets(STDIN)){ echo html_entity_decode($f); }')
 
 echo "${all_json}" | jq
