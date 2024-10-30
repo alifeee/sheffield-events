@@ -3,7 +3,7 @@
 #  by finding total pages and then calling ./get.sh for each page
 # saves the output to events.json
 
-echo -e './get_all.sh pages sleep_time'
+echo  './get_all.sh pages sleep_time'
 echo '    pages: total pages to index (default -1 / all)'
 echo '    sleep_time: time to sleep between pages (default 1)'
 sleep 2
@@ -11,6 +11,9 @@ sleep 2
 stop_after="${1:--1}"
 sleep_time="${2:-1}"
 save_to="events.json"
+
+echo "backing up existing file to ${save_to}.bak"
+cp "${save_to}" "${save_to}.bak"
 
 echo "getting all events..." > /dev/stderr
 events_html=$(curl -s "https://www.welcometosheffield.co.uk/visit/what-s-on/all-events/?page=1")
