@@ -6,7 +6,6 @@
 echo  './get_all.sh pages sleep_time'
 echo '    pages: total pages to index (default -1 / all)'
 echo '    sleep_time: time to sleep between pages (default 1)'
-sleep 2
 
 stop_after="${1:--1}"
 sleep_time="${2:-1}"
@@ -39,7 +38,7 @@ for page in `seq 1 "${last_page_num}"`; do
 
   items=$(echo "${mega_json}" | jq '.|length')
   echo "  total events so far: ${items}"
-  if [ "${sleep_time}" -gt 0 ]; then
+  if [[ "${sleep_time}" -gt 0 ]]; then
     echo "  sleeping ${sleep_time} secs..."
     sleep "${sleep_time}"
   fi
