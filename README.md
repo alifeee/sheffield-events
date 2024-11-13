@@ -42,6 +42,8 @@ echo '
 '
 sudo systemctl restart nginx.service
 
-# todo - set up as cron job
-
+# set up cron job
+crontab -e
+# 0 3 * * * (cd /usr/alifeee/sheffield-events/; echo "" > cron.log)
+# 0 4 * * * (cd /usr/alifeee/sheffield-events/; ./get_all.sh >> cron.log 2>&1)
 ```
