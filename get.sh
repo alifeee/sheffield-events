@@ -30,14 +30,16 @@ for event in "${a[@]}"; do
 	# full date/time
   datetime=$(echo "${event}" | hxselect -c "div.meta small" | sed 's/<[^>]*>//g' | sed 's/^ *//' | sed 's/ *$//')
   # start date
-  start_date=$(echo "${datetime}" | awk -F' ?- ?' '{print $1}' | sed 's/\./:/g')
+  # replace ".." with "." and "." with ":" (common errors in time)
+  start_date=$(echo "${datetime}" | awk -F' ?- ?' '{print $1}' | sed 's/\.\././g' | sed 's/\./:/g')
   if [ ! -z "${start_date}" ]; then
     start_date_unix=$(date --date="${start_date}" +%s)
   else
     start_date_unix=""
   fi
   # end date
-  end_date=$(echo "${datetime}" | awk -F' ?- ?' '{print $2}' | sed 's/\./:/g')
+  # replace ".." with "." and "." with ":" (common errors in time)
+  end_date=$(echo "${datetime}" | awk -F' ?- ?' '{print $2}' | sed 's/\.\././g' | sed 's/\./:/g')
   if [[ "${end_date}" =~ [0-9][0-9]:[0-9][0-9] ]]; then
     maybedate=$(echo "${datetime}" | awk -F' ' '{printf "%s %s %s", $1, $2, $3}')
     end_date="${maybedate} ${end_date}"
