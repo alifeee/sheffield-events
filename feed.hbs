@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>Sheffield events</title>
+    <link href="https://server.alifeee.co.uk/sheffield/events/feed.xml" rel="self" />
+    <updated>{{ isodate last_edited_unix }}</updated>
+    <author>
+        <name>alifeee</name>
+    </author>
+    <id>https://server.alifeee.co.uk/sheffield/events/</id>
+    <icon>https://server.alifeee.co.uk/static/robot.png</icon>
+
+    {{#each events}}
+    {{#if start_date_unix}}
+    <entry>
+        <title>{{ name }}</title>
+        <link href="{{ link }}" />
+        <id>{{ urlencode link }}</id>
+        <updated>{{ isodate start_date_unix }}</updated>
+        <summary>{{ description }}</summary>
+    </entry>
+    {{/if}}
+    {{/each}}
+</feed>

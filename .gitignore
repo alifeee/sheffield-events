@@ -1,6 +1,7 @@
 # events
 events.json
 events.json.bak
+feed.xml
 
 # cron
 cron.log
@@ -8,3 +9,6 @@ cron.error.log
 
 # backups
 /backups
+
+# python
+/env
