@@ -3,7 +3,7 @@
 echo "Content-type: text/plain"
 echo ""
 echo "===== Sheffield Events ====="
-echo "by alifeee ~~ alifeee.co.uk ~~"
+echo "by alifeee ~~ alifeee.net ~~"
 echo "last updated: "$(cat ../events.json | jq -r '.last_edited')
 echo "https://github.com/alifeee/sheffield-events/"
 echo "============================"
