@@ -2,6 +2,8 @@
 # get events from https://www.welcometosheffield.co.uk/visit/what-s-on/all-events
 #  and attempt to format as json
 
+set -euo pipefail
+
 URL="https://www.welcometosheffield.co.uk/visit/what-s-on/all-events/"
 URL_base="https://www.welcometosheffield.co.uk"
 page="${1}"
@@ -11,7 +13,15 @@ if [ -z "${page}" ]; then
   exit 1
 fi
 
-events_html=$(curl -s "${URL}?page=${page}")
+TEMPFILE="/tmp/iajwf82j.html"
+code=$(
+  curl -sL -w "%{http_code}" -o "${TEMPFILE}" "${URL}?page=${page}"
+)
+if [[ ! "${code}" =~ 2.. ]]; then
+  echo "code seems bad. got HTTP ${code}"
+  exit 1
+fi
+events_html=$(cat "${TEMPFILE}")
 results=$(echo "${events_html}" | sed 's/\$/USD/g' | hxnormalize -l 240 -x | hxselect -s '$' "div.search-result")
 mapfile -d$ a <<< "${results}"; unset 'a[-1]'
 # echo "${#a[@]}" # length

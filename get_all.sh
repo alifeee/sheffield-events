@@ -3,6 +3,8 @@
 #  by finding total pages and then calling ./get.sh for each page
 # saves the output to events.json
 
+set -euo pipefail
+
 date >> /dev/stderr
 date
 echo  './get_all.sh pages sleep_time'
@@ -14,7 +16,16 @@ sleep_time="${2:-1}"
 save_to="events.json"
 
 echo "getting all events..."
-events_html=$(curl -s "https://www.welcometosheffield.co.uk/visit/what-s-on/all-events/?page=1")
+TEMPFILE="/tmp/aj28rfiv9j8h2w.html"
+code=$(
+  curl -sL -w "%{http_code}" -o "${TEMPFILE}" \
+    "https://www.welcometosheffield.co.uk/visit/what-s-on/all-events/?page=1"
+)
+if [[ ! "${code}" =~ 2.. ]]; then
+  echo "code seems bad. got HTTP ${code}. quitting."
+  exit 1
+fi
+events_html=$(cat "${TEMPFILE}")
 last_page_num=$(echo "${events_html}" | hxnormalize -l 240 -x | hxselect -c "a[data-pagenumber]:nth-last-child(2) span")
 
 echo "getting a total of ${last_page_num} pages..."
@@ -29,6 +40,10 @@ for page in `seq 1 "${last_page_num}"`; do
 
   echo "getting page ${page}..."
   json_arr=$(./get.sh "${page}")
+  if [[ "${?}" != 0 ]]; then
+    echo "something went wrong with ./get.sh, quitting..."
+    exit 1
+  fi
 
   items=$(echo "${json_arr}" | jq '.|length')
   echo "  ${items} events found on page ${page}"
