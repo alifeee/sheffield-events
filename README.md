@@ -1,3 +1,5 @@
+> [!CAUTION]
+> MOVED! see <https://git.alifeee.net/sheffield-events/about/>
 # Sheffield Events
 
 Making a machine readable feed of events from <https://www.welcometosheffield.co.uk/visit/what-s-on/all-events/>.
